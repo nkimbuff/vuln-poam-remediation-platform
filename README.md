@@ -28,9 +28,9 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 ## Status
 - [x] Repo + workspace schema/volume
 - [x] Synthetic data landed
-- [x] Lakeflow pipeline run (1,194 bronze -> 1,176 valid + 18 quarantined -> 763 findings)
+- [x] Lakeflow pipeline run (4,053 bronze -> 3,993 valid + 60 quarantined -> 1,158 findings, 476 overdue)
 - [x] UC governance (tags, mask function + secure view, grants, lineage)
-- [x] Lakebase (763 findings synced; read p50 1.6ms, write p50 7.4ms)
+- [x] Lakebase (1,158 findings synced; read p50 2.8ms, write p50 11ms)
 - [x] ML / Gen AI (UC model, scores, 5 LLM POA&M drafts)
-- [ ] Genie
+- [x] Genie (space + 3 NL questions with SQL and results)
 - [ ] App

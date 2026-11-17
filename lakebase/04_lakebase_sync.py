@@ -37,6 +37,10 @@ conn.execute("""CREATE TABLE IF NOT EXISTS ops.poams (
 conn.execute("""CREATE TABLE IF NOT EXISTS ops.status_history (
   id bigserial PRIMARY KEY, finding_id text, old_status text, new_status text, changed_by text,
   changed_at timestamptz DEFAULT now())""")
+RESET = True  # rebuild: clear operational tables so stale finding_ids from earlier data don't linger. Set False to preserve ISSO edits.
+if RESET:
+    conn.execute("TRUNCATE ops.poams, ops.status_history, ops.findings RESTART IDENTITY CASCADE")
+    log("RESET=True: operational tables truncated")
 log("tables ready: ops.findings, ops.poams, ops.status_history")
 
 # COMMAND ----------

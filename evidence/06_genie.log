@@ -1,0 +1,100 @@
+# 06 Genie space 01f1e2a69970155d840ef56e14803a07 - 2026-11-17T17:10:35Z
+=== Q: Which systems have the most overdue critical findings? | status: COMPLETED
+SQL: WITH ranked_systems AS (
+  SELECT
+    `system_id`,
+    `system_name`,
+    `criticality`,
+    `overdue_findings`,
+    `critical_findings`,
+    RANK() OVER (
+      ORDER BY `overdue_findings` DESC, `critical_findings` DESC
+    ) AS `system_rank`
+  FROM `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_system_risk`
+  WHERE `overdue_findings` IS NOT NULL
+    AND `critical_findings` IS NOT NULL
+)
+SELECT
+  `system_id`,
+  `system_name`,
+  `criticality`,
+  `overdue_findings`,
+  `critical_findings`
+FROM ranked_systems
+WHERE `system_rank` <= 10
+ORDER BY `overdue_findings` DESC, `critical_findings` DESC, `system_id`
+COLUMNS: ['system_id', 'system_name', 'criticality', 'overdue_findings', 'critical_findings']
+   ['SYS-008', 'Synthetic System 008', 'MISSION_CRITICAL', '44', '32']
+   ['SYS-016', 'Synthetic System 016', 'HIGH', '36', '29']
+   ['SYS-014', 'Synthetic System 014', 'MISSION_CRITICAL', '35', '28']
+   ['SYS-007', 'Synthetic System 007', 'MISSION_CRITICAL', '33', '28']
+   ['SYS-018', 'Synthetic System 018', 'MISSION_CRITICAL', '29', '24']
+   ['SYS-004', 'Synthetic System 004', 'MODERATE', '28', '29']
+   ['SYS-015', 'Synthetic System 015', 'MODERATE', '28', '23']
+   ['SYS-010', 'Synthetic System 010', 'MISSION_CRITICAL', '27', '27']
+   ['SYS-011', 'Synthetic System 011', 'MODERATE', '26', '24']
+   ['SYS-002', 'Synthetic System 002', 'MISSION_CRITICAL', '25', '23']
+TEXT: Examples include:
+- **Synthetic System 008** has the most overdue findings at **44**, with **32** critical findings.
+- **Synthetic System 016** follows with **36** overdue findings and **29** critical findings.
+- **Synthetic System 014** has **35** overdue findings and **28** critical findings.
+- **Synthetic System 007** has **33** overdue findings and **28** critical findings.
+- **Synthetic System 018** has **29** overdue findings and **24** critical findings.
+Across the 10 systems shown, overdue findings range from **25** to **44**, and the highest-count systems are mostly **MISSION_CRITICAL**.
+=== Q: How many findings are overdue by severity, and what share of all findings is that? | status: COMPLETED
+SQL: WITH `filtered_findings` AS (
+  SELECT `severity`, `is_overdue`
+  FROM `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_findings_secure`
+  WHERE `severity` IS NOT NULL
+), `total_findings` AS (
+  SELECT COUNT(*) AS `all_findings_count`
+  FROM `filtered_findings`
+)
+SELECT
+  f.`severity`,
+  SUM(CASE WHEN f.`is_overdue` = TRUE THEN 1 ELSE 0 END) AS `overdue_findings`,
+  100 * (try_divide(SUM(CASE WHEN f.`is_overdue` = TRUE THEN 1 ELSE 0 END),t.`all_findings_count`)) AS `share_of_all_findings`
+FROM `filtered_findings` f
+CROSS JOIN `total_findings` t
+GROUP BY f.`severity`, t.`all_findings_count`
+ORDER BY `overdue_findings` DESC, f.`severity`
+COLUMNS: ['severity', 'overdue_findings', 'share_of_all_findings']
+   ['CRITICAL', '285', '24.61139896373057']
+   ['HIGH', '191', '16.493955094991364']
+   ['LOW', '0', '0.0']
+   ['MEDIUM', '0', '0.0']
+TEXT: Overdue findings appear only in **CRITICAL** and **HIGH** severity in the visible data. Examples include:
+- **CRITICAL:** **285** overdue findings, representing **24.6%** of all findings
+- **HIGH:** **191** overdue findings, representing **16.5%** of all findings
+- **LOW:** **0** overdue findings, representing **0.0%** of all findings
+- **MEDIUM:** **0** overdue findings, representing **0.0%** of all findings
+
+Across these 4 severity groups, overdue findings are concentrated entirely in the two highest severities, with **CRITICAL** higher than **HIGH**.
+=== Q: List the 5 highest priority findings with their system criticality and SLA due date | status: COMPLETED
+SQL: SELECT
+  `f`.`finding_id`,
+  `f`.`system_id`,
+  `f`.`system_name`,
+  `f`.`criticality`,
+  `f`.`sla_due_date`,
+  `p`.`priority_score`,
+  `p`.`priority_rank`
+FROM `serverless_stable_seg9n6_catalog`.`vuln_poam`.`finding_priority` AS `p`
+INNER JOIN `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_findings_secure` AS `f`
+  ON `p`.`finding_id` = `f`.`finding_id`
+WHERE `p`.`priority_rank` IS NOT NULL
+ORDER BY `p`.`priority_rank` ASC
+LIMIT 5
+COLUMNS: ['finding_id', 'system_id', 'system_name', 'criticality', 'sla_due_date', 'priority_score', 'priority_rank']
+   ['9c7d6120524d', 'SYS-002', 'Synthetic System 002', 'MISSION_CRITICAL', '2026-09-22', '0.9987', '1']
+   ['119b052a2295', 'SYS-014', 'Synthetic System 014', 'MISSION_CRITICAL', '2026-10-07', '0.9982', '2']
+   ['e34553e0bd31', 'SYS-010', 'Synthetic System 010', 'MISSION_CRITICAL', '2026-09-29', '0.9968', '3']
+   ['0dab48d44461', 'SYS-017', 'Synthetic System 017', 'MISSION_CRITICAL', '2026-09-29', '0.9968', '4']
+   ['c6502c23ebc0', 'SYS-007', 'Synthetic System 007', 'MISSION_CRITICAL', '2026-10-06', '0.9962', '5']
+TEXT: The **5 highest priority findings** all have **MISSION_CRITICAL** system criticality, with SLA due dates ranging from **2026-09-22** to **2026-10-07**.
+
+- **Rank 1:** Finding **9c7d6120...** — **MISSION_CRITICAL** — SLA due **2026-09-22**
+- **Rank 2:** Finding **119b052a...** — **MISSION_CRITICAL** — SLA due **2026-10-07**
+- **Rank 3:** Finding **e34553e0...** — **MISSION_CRITICAL** — SLA due **2026-09-29**
+- **Rank 4:** Finding **0dab48d4...** — **MISSION_CRITICAL** — SLA due **2026-09-29**
+- **Rank 5:** Finding **c6502c23...** — **MISSION_CRITICAL** — SLA due **2026-10-06**

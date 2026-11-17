@@ -1,5 +1,5 @@
 """Seeded synthetic vulnerability-scan generator. Usage: generate_scans.py OUT_DIR [SEED]
-Writes: systems.csv, scan_<date>.csv (3 weekly scans, with overlap + a few bad rows)."""
+Writes: systems.csv, scan_<date>.csv (10 weekly scans; unresolved findings persist so some breach SLA; a few bad rows)."""
 import csv, random, sys, datetime as dt
 from pathlib import Path
 
@@ -20,13 +20,13 @@ hosts = [(f"host-{i:04d}.example.internal", f"10.{rng.randint(0,255)}.{rng.randi
           rng.choice(sys_ids)) for i in range(150)]
 base = dt.date(2026, 9, 7)
 carry = []
-for wk in range(3):
+for wk in range(10):
     d = base + dt.timedelta(days=7 * wk)
     rows = list(carry)  # unresolved findings reappear (same finding_key => dedupe in silver)
-    for _ in range(rng.randint(250, 350)):
+    for _ in range(rng.randint(90, 150)):
         h = rng.choice(hosts); p = rng.choice(plugins)
         rows.append([f"{h[0]}|{p[0]}", h[0], h[1], h[2], p[0], p[1], p[2], str(p[3]).lower(), d.isoformat()])
-    carry = [r for r in rows if rng.random() < 0.55]
+    carry = [r for r in rows if rng.random() < 0.8]
     for r in rng.sample(rows, 6):  # dirty rows to exercise expectations
         bad = list(r); bad[rng.choice([4, 5, 6])] = rng.choice(["", "UNKNOWN", "-1"]); rows.append(bad)
     with open(out / f"scan_{d.isoformat()}.csv", "w", newline="") as f:

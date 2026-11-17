@@ -1,12 +1,26 @@
-# 01 synthetic data landing - 2026-11-17T16:20:50Z
+# 01 synthetic data landing - 2026-11-17T16:49:18Z  (regenerated: 10 weekly scans so findings can breach SLA)
 $ python3 -I data_gen/generate_scans.py OUT 42
-     289 /tmp/vuln_scans_out/scan_2026-09-07.csv
-     415 /tmp/vuln_scans_out/scan_2026-09-14.csv
-     493 /tmp/vuln_scans_out/scan_2026-09-21.csv
+     113 /tmp/vuln_scans_out/scan_2026-09-07.csv
+     183 /tmp/vuln_scans_out/scan_2026-09-14.csv
+     296 /tmp/vuln_scans_out/scan_2026-09-21.csv
+     369 /tmp/vuln_scans_out/scan_2026-09-28.csv
+     410 /tmp/vuln_scans_out/scan_2026-10-05.csv
+     474 /tmp/vuln_scans_out/scan_2026-10-12.csv
+     509 /tmp/vuln_scans_out/scan_2026-10-19.csv
+     545 /tmp/vuln_scans_out/scan_2026-10-26.csv
+     571 /tmp/vuln_scans_out/scan_2026-11-02.csv
+     593 /tmp/vuln_scans_out/scan_2026-11-09.csv
       21 /tmp/vuln_scans_out/systems.csv
-    1218 total
+    4084 total
 $ databricks fs ls (volume)
 scan_2026-09-07.csv
 scan_2026-09-14.csv
 scan_2026-09-21.csv
+scan_2026-09-28.csv
+scan_2026-10-05.csv
+scan_2026-10-12.csv
+scan_2026-10-19.csv
+scan_2026-10-26.csv
+scan_2026-11-02.csv
+scan_2026-11-09.csv
 systems.csv

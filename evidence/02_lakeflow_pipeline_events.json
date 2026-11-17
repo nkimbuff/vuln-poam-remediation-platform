@@ -1,6 +1,1785 @@
 [
   {
     "event_type": "update_progress",
+    "id": "2811ed90-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is COMPLETED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935159277003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654113
+      }
+    },
+    "timestamp": "2026-11-17T17:05:57.481Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "280850a0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "a1c7c2f2-48de-4cdf-9a05-486a0d565afd",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935159276001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654102
+      }
+    },
+    "timestamp": "2026-11-17T17:05:57.418Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "2623d930-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "a1c7c2f2-48de-4cdf-9a05-486a0d565afd",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935156112004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654099
+      }
+    },
+    "timestamp": "2026-11-17T17:05:54.243Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "262008a0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "a1c7c2f2-48de-4cdf-9a05-486a0d565afd",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935156112003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654098
+      }
+    },
+    "timestamp": "2026-11-17T17:05:54.218Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "261f9370-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "a1c7c2f2-48de-4cdf-9a05-486a0d565afd",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935156112002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654097
+      }
+    },
+    "timestamp": "2026-11-17T17:05:54.215Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "260072b0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935156112001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654096
+      }
+    },
+    "timestamp": "2026-11-17T17:05:54.011Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "25ff3a30-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "9b1f1584-f844-4ae4-95b8-929201709172",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935156111001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654095
+      }
+    },
+    "timestamp": "2026-11-17T17:05:54.003Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "23f894c0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "9b1f1584-f844-4ae4-95b8-929201709172",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935152926004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654093
+      }
+    },
+    "timestamp": "2026-11-17T17:05:50.604Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "23f2a150-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "9b1f1584-f844-4ae4-95b8-929201709172",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935152926003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654092
+      }
+    },
+    "timestamp": "2026-11-17T17:05:50.565Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "23f20510-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "9b1f1584-f844-4ae4-95b8-929201709172",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935152926002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654091
+      }
+    },
+    "timestamp": "2026-11-17T17:05:50.561Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "239c9210-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935152926001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654090
+      }
+    },
+    "timestamp": "2026-11-17T17:05:50.001Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "239b80a0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "109ecf49-b056-4d84-a83f-fba36e26631b",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935152925001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654089
+      }
+    },
+    "timestamp": "2026-11-17T17:05:49.994Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "2167d7c0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "109ecf49-b056-4d84-a83f-fba36e26631b",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146452005,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654073
+      }
+    },
+    "timestamp": "2026-11-17T17:05:46.300Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "216036a0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "109ecf49-b056-4d84-a83f-fba36e26631b",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146452004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654072
+      }
+    },
+    "timestamp": "2026-11-17T17:05:46.250Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "215f7350-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "109ecf49-b056-4d84-a83f-fba36e26631b",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146452003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654071
+      }
+    },
+    "timestamp": "2026-11-17T17:05:46.245Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "21372ad0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146452002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654070
+      }
+    },
+    "timestamp": "2026-11-17T17:05:45.981Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "2134b9d0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "f51128a5-3c9b-4859-bb83-a0db58b74209",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146452001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654069
+      }
+    },
+    "timestamp": "2026-11-17T17:05:45.965Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "20ab1770-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "82949426-c7db-41ad-86a4-e115061e904c",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935146451001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654068
+      }
+    },
+    "timestamp": "2026-11-17T17:05:45.063Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1e4b2e70-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "82949426-c7db-41ad-86a4-e115061e904c",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218009,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654063
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.079Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1e4a6b20-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "f51128a5-3c9b-4859-bb83-a0db58b74209",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218008,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654062
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.074Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1e4477b0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "82949426-c7db-41ad-86a4-e115061e904c",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218007,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654061
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.035Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1e41b890-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "f51128a5-3c9b-4859-bb83-a0db58b74209",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218006,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654060
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.017Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "1e414360-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "82949426-c7db-41ad-86a4-e115061e904c",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218005,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654059
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.014Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "1e40a720-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "f51128a5-3c9b-4859-bb83-a0db58b74209",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654058
+      }
+    },
+    "timestamp": "2026-11-17T17:05:41.010Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1ddfc270-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654056
+      }
+    },
+    "timestamp": "2026-11-17T17:05:40.375Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1ddf7450-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654055
+      }
+    },
+    "timestamp": "2026-11-17T17:05:40.373Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1dd90bb0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans' has COMPLETED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "bddd569c-51c1-454e-bbfe-80449c38d477",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143218001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654054
+      }
+    },
+    "timestamp": "2026-11-17T17:05:40.331Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1dc69520-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Completed a streaming update of 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans'.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "bddd569c-51c1-454e-bbfe-80449c38d477",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935143217001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654052
+      }
+    },
+    "timestamp": "2026-11-17T17:05:40.210Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "1b7e52d0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' has COMPLETED.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "cf834fb2-88b3-44a7-98d6-96224a8c1e9d",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935137039001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654051
+      }
+    },
+    "timestamp": "2026-11-17T17:05:36.381Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "191e90e0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' is RUNNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "cf834fb2-88b3-44a7-98d6-96224a8c1e9d",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935133736004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654049
+      }
+    },
+    "timestamp": "2026-11-17T17:05:32.398Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "19173de0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' is STARTING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "cf834fb2-88b3-44a7-98d6-96224a8c1e9d",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935133736003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654048
+      }
+    },
+    "timestamp": "2026-11-17T17:05:32.350Z"
+  },
+  {
+    "event_type": "planning_information",
+    "id": "19125be0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' has been planned to be executed as COMPLETE_RECOMPUTE.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "cf834fb2-88b3-44a7-98d6-96224a8c1e9d",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935133736002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654047
+      }
+    },
+    "timestamp": "2026-11-17T17:05:32.318Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "18e09d80-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' is PLANNING.",
+    "origin": {
+      "batch_id": 0,
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935133736001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654046
+      }
+    },
+    "timestamp": "2026-11-17T17:05:31.992Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "18d8d550-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans' is RUNNING.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_id": "bddd569c-51c1-454e-bbfe-80449c38d477",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935133735001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654045
+      }
+    },
+    "timestamp": "2026-11-17T17:05:31.941Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "17bbf3a0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans' is STARTING.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179023,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654044
+      }
+    },
+    "timestamp": "2026-11-17T17:05:30.074Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179bc170-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179022,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654043
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.863Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179b7350-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179021,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654042
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.861Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179b4c40-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_findings' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179020,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654041
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.860Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179afe20-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179019,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654040
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.858Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179ad710-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179018,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654039
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.857Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "179a88f0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179017,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654038
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.855Z"
+  },
+  {
+    "event_type": "flow_progress",
+    "id": "17999e90-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow 'serverless_stable_seg9n6_catalog.vuln_poam.gold_findings' is QUEUED.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "materialization_name": "serverless_stable_seg9n6_catalog.vuln_poam.__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179016,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654037
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.849Z"
+  },
+  {
+    "event_type": "update_progress",
+    "id": "17972d90-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is RUNNING.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179015,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654036
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.833Z"
+  },
+  {
+    "event_type": "graph_created",
+    "id": "1795ce00-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataflow graph successfully loaded.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179014,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654035
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.824Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "178bbbe0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`bronze_scans` defined as STREAMING_TABLE.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179013,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654034
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.758Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "178971f0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`bronze_systems` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179012,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654033
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.743Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "17877620-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_quarantine` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179011,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654032
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.730Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "17855340-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_findings` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179010,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654031
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.716Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "1780e670-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_scan_rows` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179009,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654030
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.687Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "177f11b0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_system_risk` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179008,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654029
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.675Z"
+  },
+  {
+    "event_type": "dataset_definition",
+    "id": "177af300-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Dataset `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_findings` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179007,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654028
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.648Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "17768630-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_system_risk` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179006,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654027
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.619Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "1774ff90-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`gold_findings` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179005,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654026
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.609Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "1772dcb0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_findings` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179004,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654025
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.595Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "17701d90-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_scan_rows` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654024
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.577Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "176cc230-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`silver_quarantine` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654023
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.555Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "176bd7d0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`bronze_systems` defined as MATERIALIZED_VIEW.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130179001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654022
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.549Z"
+  },
+  {
+    "event_type": "flow_definition",
+    "id": "1764d2f0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Flow `serverless_stable_seg9n6_catalog`.`vuln_poam`.`bronze_scans` defined as APPEND.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "flow_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935130178001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654021
+      }
+    },
+    "timestamp": "2026-11-17T17:05:29.503Z"
+  },
+  {
+    "event_type": "update_progress",
+    "id": "134b5310-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is SETTING_UP_TABLES.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935123863003,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654013
+      }
+    },
+    "timestamp": "2026-11-17T17:05:22.625Z"
+  },
+  {
+    "event_type": "dataset_life_cycle",
+    "id": "131a09e0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "STREAMING_TABLE serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans has been successfully reset.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "dataset_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935123863002,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654012
+      }
+    },
+    "timestamp": "2026-11-17T17:05:22.302Z"
+  },
+  {
+    "event_type": "update_progress",
+    "id": "128bfab0-e2a9-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is RESETTING.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935123863001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654011
+      }
+    },
+    "timestamp": "2026-11-17T17:05:21.371Z"
+  },
+  {
+    "event_type": "update_progress",
+    "id": "fdde6670-e2a8-11f1-908d-260d2d1f6c6b",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is INITIALIZING.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935087204001,
+      "data_plane_id": {
+        "instance": "execution",
+        "seq_no": 1794935082654001
+      }
+    },
+    "timestamp": "2026-11-17T17:04:46.679Z"
+  },
+  {
+    "event_type": "runtime_details",
+    "id": "f91349d0-e2a8-11f1-a4bc-00000a134629",
+    "level": "INFO",
+    "maturity_level": "EVOLVING",
+    "message": "Resolved runtime environment details for update 047a38.",
+    "origin": {
+      "cloud": "AWS",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935078639001
+    },
+    "timestamp": "2026-11-17T17:04:38.637Z"
+  },
+  {
+    "event_type": "update_progress",
+    "id": "f2ee4280-e2a8-11f1-a4bc-00000a134629",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 is WAITING_FOR_RESOURCES.",
+    "origin": {
+      "cloud": "AWS",
+      "cluster_id": "1117-170428-xr9f1wgi-v2n",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935068329001
+    },
+    "timestamp": "2026-11-17T17:04:28.328Z"
+  },
+  {
+    "event_type": "create_update",
+    "id": "f06e2750-e2a8-11f1-a3ff-00000a122dd1",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Update 047a38 started by API_CALL.",
+    "origin": {
+      "cloud": "AWS",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935064135001
+    },
+    "timestamp": "2026-11-17T17:04:24.114Z"
+  },
+  {
+    "event_type": "user_action",
+    "id": "f067e5c0-e2a8-11f1-a3ff-00000a122dd1",
+    "level": "INFO",
+    "maturity_level": "STABLE",
+    "message": "Principal 'nate.kim@databricks.com' started an update.",
+    "origin": {
+      "cloud": "AWS",
+      "org_id": 7474654152993113,
+      "pipeline_id": "00f24272-d3eb-49f0-bbed-6cc897e460d0",
+      "pipeline_name": "vuln-poam-pipeline",
+      "region": "us-east-1",
+      "request_id": "047a3801-eab7-4451-b8e7-08d763de8cee",
+      "update_id": "047a3801-eab7-4451-b8e7-08d763de8cee"
+    },
+    "sequence": {
+      "control_plane_seq_no": 1794935064094001
+    },
+    "timestamp": "2026-11-17T17:04:24.092Z"
+  },
+  {
+    "event_type": "update_progress",
     "id": "ff53baa0-e2a3-11f1-ad69-e2405e7599d5",
     "level": "INFO",
     "maturity_level": "STABLE",

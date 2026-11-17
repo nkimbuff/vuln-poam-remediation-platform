@@ -1,27 +1,27 @@
-# 02 Lakeflow pipeline run - 2026-11-17T16:29:28Z
-pipeline_id=00f24272-d3eb-49f0-bbed-6cc897e460d0 update_id=3f8d61b6-60af-4b2b-afda-0cd139f31972 state=COMPLETED
-History: run 1 aggregated before validating (0 failures, dirty rows masked); run 2 validated row-level but quarantine anti-join matched nothing (0 rows); this log is run 3 after both fixes.
+# 02 Lakeflow pipeline run - 2026-11-17T17:10:11Z
+pipeline_id=00f24272-d3eb-49f0-bbed-6cc897e460d0 update_id=047a3801-eab7-4451-b8e7-08d763de8cee (full refresh) state=COMPLETED
+History: earlier runs aggregated before validating (dirty rows masked) and had an empty quarantine; both fixed. Data then regenerated to 10 weekly scans so findings can breach SLA (first data had 0 overdue). This log = final run.
 
 ## Row counts
 [
   {
-    "n": "1176",
+    "n": "3993",
     "t": "silver_scan_rows"
   },
   {
-    "n": "1194",
+    "n": "4053",
     "t": "bronze_scans"
   },
   {
-    "n": "18",
+    "n": "60",
     "t": "silver_quarantine"
   },
   {
-    "n": "763",
+    "n": "1158",
     "t": "silver_findings"
   },
   {
-    "n": "763",
+    "n": "1158",
     "t": "gold_findings"
   },
   {
@@ -30,131 +30,107 @@ History: run 1 aggregated before validating (0 failures, dirty rows masked); run
   }
 ]
 
-## Expectation results for this update (event_log)
+## Expectation results (event_log, this update)
 [
   {
     "expectation": "cve_present",
-    "failed": "7",
+    "failed": "22",
     "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
-    "passed": "1187"
+    "passed": "4031"
   },
   {
     "expectation": "known_system",
     "failed": "0",
     "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
-    "passed": "1194"
+    "passed": "4053"
   },
   {
     "expectation": "valid_cvss",
-    "failed": "5",
+    "failed": "17",
     "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
-    "passed": "1189"
+    "passed": "4036"
   },
   {
     "expectation": "valid_severity",
-    "failed": "6",
+    "failed": "21",
     "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
-    "passed": "1188"
+    "passed": "4032"
   }
 ]
 
-## Quarantined rows (sample)
+## SLA overdue by severity
 [
   {
-    "cve_id": "-1",
-    "cvss": "8.5",
-    "scan_date": "2026-09-07",
-    "severity": "LOW"
-  },
-  {
-    "cve_id": "CVE-2025-4044",
-    "cvss": "6.8",
-    "scan_date": "2026-09-07",
-    "severity": "-1"
-  },
-  {
-    "cve_id": "CVE-2025-7118",
-    "cvss": "-1",
-    "scan_date": "2026-09-07",
-    "severity": "LOW"
-  },
-  {
-    "cve_id": "CVE-2025-2612",
-    "cvss": "5.2",
-    "scan_date": "2026-09-07",
-    "severity": "-1"
-  },
-  {
-    "cve_id": "CVE-2025-5889",
-    "cvss": "3.2",
-    "scan_date": "2026-09-07",
-    "severity": "-1"
-  },
-  {
-    "cve_id": "",
-    "cvss": "3.3",
-    "scan_date": "2026-09-07",
+    "findings": "396",
+    "max_age_days": "63",
+    "overdue": "285",
     "severity": "CRITICAL"
   },
   {
-    "cve_id": "-1",
-    "cvss": "5.2",
-    "scan_date": "2026-09-07",
-    "severity": "CRITICAL"
+    "findings": "383",
+    "max_age_days": "63",
+    "overdue": "191",
+    "severity": "HIGH"
   },
   {
-    "cve_id": "CVE-2025-4814",
-    "cvss": "5.0",
-    "scan_date": "2026-09-07",
-    "severity": ""
+    "findings": "164",
+    "max_age_days": "63",
+    "overdue": "0",
+    "severity": "LOW"
+  },
+  {
+    "findings": "215",
+    "max_age_days": "63",
+    "overdue": "0",
+    "severity": "MEDIUM"
   }
 ]
 
 ## gold_system_risk top 5
 [
   {
-    "avg_age_days": "6.2",
-    "critical_findings": "23",
+    "avg_age_days": "35.1",
+    "critical_findings": "32",
     "criticality": "MISSION_CRITICAL",
-    "open_findings": "59",
-    "overdue_findings": "0",
+    "open_findings": "108",
+    "overdue_findings": "44",
+    "owner_team": "Database Admin",
+    "system_id": "SYS-008"
+  },
+  {
+    "avg_age_days": "34.1",
+    "critical_findings": "29",
+    "criticality": "HIGH",
+    "open_findings": "73",
+    "overdue_findings": "36",
+    "owner_team": "Network Eng",
+    "system_id": "SYS-016"
+  },
+  {
+    "avg_age_days": "33.9",
+    "critical_findings": "28",
+    "criticality": "MISSION_CRITICAL",
+    "open_findings": "73",
+    "overdue_findings": "35",
+    "owner_team": "App Dev",
+    "system_id": "SYS-014"
+  },
+  {
+    "avg_age_days": "29.3",
+    "critical_findings": "28",
+    "criticality": "MISSION_CRITICAL",
+    "open_findings": "83",
+    "overdue_findings": "33",
     "owner_team": "End User Computing",
     "system_id": "SYS-007"
   },
   {
-    "avg_age_days": "8.4",
-    "critical_findings": "16",
-    "criticality": "MODERATE",
-    "open_findings": "39",
-    "overdue_findings": "0",
-    "owner_team": "Platform Ops",
-    "system_id": "SYS-013"
-  },
-  {
-    "avg_age_days": "7.7",
-    "critical_findings": "10",
+    "avg_age_days": "30.5",
+    "critical_findings": "24",
     "criticality": "MISSION_CRITICAL",
-    "open_findings": "29",
-    "overdue_findings": "0",
-    "owner_team": "Network Eng",
-    "system_id": "SYS-020"
-  },
-  {
-    "avg_age_days": "7.0",
-    "critical_findings": "9",
-    "criticality": "MISSION_CRITICAL",
-    "open_findings": "27",
-    "overdue_findings": "0",
-    "owner_team": "Network Eng",
-    "system_id": "SYS-017"
-  },
-  {
-    "avg_age_days": "7.5",
-    "critical_findings": "11",
-    "criticality": "HIGH",
-    "open_findings": "26",
-    "overdue_findings": "0",
-    "owner_team": "End User Computing",
-    "system_id": "SYS-005"
+    "open_findings": "65",
+    "overdue_findings": "29",
+    "owner_team": "App Dev",
+    "system_id": "SYS-018"
   }
 ]

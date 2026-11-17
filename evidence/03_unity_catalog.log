@@ -89,7 +89,7 @@
     "severity": "LOW"
   }
 ]
-## Lineage (system.access.table_lineage)
+## Lineage (system.access.table_lineage, refreshed after rebuild)
 [
   {
     "source_table_full_name": "",
@@ -104,6 +104,10 @@
     "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.event_log_00f24272_d3eb_49f0_bbed_6cc897e460d0"
   },
   {
+    "source_table_full_name": "",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.finding_priority"
+  },
+  {
     "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
     "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings"
   },
@@ -113,11 +117,27 @@
   },
   {
     "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings_secure"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
     "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk"
   },
   {
     "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
     "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_quarantine"
   },
   {
     "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
