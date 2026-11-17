@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+.databricks/
+node_modules/
+.DS_Store
+*.pem
+*.key
+secrets*
