@@ -27,8 +27,8 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 
 ## Status
 - [x] Repo + workspace schema/volume
-- [ ] Synthetic data landed
-- [ ] Lakeflow pipeline run
+- [x] Synthetic data landed
+- [x] Lakeflow pipeline run (1,194 bronze -> 1,176 valid + 18 quarantined -> 763 findings)
 - [ ] UC governance
 - [ ] Lakebase
 - [ ] ML / Gen AI

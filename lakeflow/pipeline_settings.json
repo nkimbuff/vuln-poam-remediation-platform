@@ -1,0 +1,2 @@
+{"name":"vuln-poam-pipeline","serverless":true,"catalog":"serverless_stable_seg9n6_catalog","schema":"vuln_poam",
+ "libraries":[{"notebook":{"path":"/Users/nate.kim@databricks.com/vuln-poam-remediation/pipeline"}}],"channel":"CURRENT"}

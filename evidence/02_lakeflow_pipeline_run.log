@@ -1,0 +1,160 @@
+# 02 Lakeflow pipeline run - 2026-11-17T16:29:28Z
+pipeline_id=00f24272-d3eb-49f0-bbed-6cc897e460d0 update_id=3f8d61b6-60af-4b2b-afda-0cd139f31972 state=COMPLETED
+History: run 1 aggregated before validating (0 failures, dirty rows masked); run 2 validated row-level but quarantine anti-join matched nothing (0 rows); this log is run 3 after both fixes.
+
+## Row counts
+[
+  {
+    "n": "1176",
+    "t": "silver_scan_rows"
+  },
+  {
+    "n": "1194",
+    "t": "bronze_scans"
+  },
+  {
+    "n": "18",
+    "t": "silver_quarantine"
+  },
+  {
+    "n": "763",
+    "t": "silver_findings"
+  },
+  {
+    "n": "763",
+    "t": "gold_findings"
+  },
+  {
+    "n": "20",
+    "t": "gold_system_risk"
+  }
+]
+
+## Expectation results for this update (event_log)
+[
+  {
+    "expectation": "cve_present",
+    "failed": "7",
+    "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "passed": "1187"
+  },
+  {
+    "expectation": "known_system",
+    "failed": "0",
+    "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "passed": "1194"
+  },
+  {
+    "expectation": "valid_cvss",
+    "failed": "5",
+    "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "passed": "1189"
+  },
+  {
+    "expectation": "valid_severity",
+    "failed": "6",
+    "flow": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows",
+    "passed": "1188"
+  }
+]
+
+## Quarantined rows (sample)
+[
+  {
+    "cve_id": "-1",
+    "cvss": "8.5",
+    "scan_date": "2026-09-07",
+    "severity": "LOW"
+  },
+  {
+    "cve_id": "CVE-2025-4044",
+    "cvss": "6.8",
+    "scan_date": "2026-09-07",
+    "severity": "-1"
+  },
+  {
+    "cve_id": "CVE-2025-7118",
+    "cvss": "-1",
+    "scan_date": "2026-09-07",
+    "severity": "LOW"
+  },
+  {
+    "cve_id": "CVE-2025-2612",
+    "cvss": "5.2",
+    "scan_date": "2026-09-07",
+    "severity": "-1"
+  },
+  {
+    "cve_id": "CVE-2025-5889",
+    "cvss": "3.2",
+    "scan_date": "2026-09-07",
+    "severity": "-1"
+  },
+  {
+    "cve_id": "",
+    "cvss": "3.3",
+    "scan_date": "2026-09-07",
+    "severity": "CRITICAL"
+  },
+  {
+    "cve_id": "-1",
+    "cvss": "5.2",
+    "scan_date": "2026-09-07",
+    "severity": "CRITICAL"
+  },
+  {
+    "cve_id": "CVE-2025-4814",
+    "cvss": "5.0",
+    "scan_date": "2026-09-07",
+    "severity": ""
+  }
+]
+
+## gold_system_risk top 5
+[
+  {
+    "avg_age_days": "6.2",
+    "critical_findings": "23",
+    "criticality": "MISSION_CRITICAL",
+    "open_findings": "59",
+    "overdue_findings": "0",
+    "owner_team": "End User Computing",
+    "system_id": "SYS-007"
+  },
+  {
+    "avg_age_days": "8.4",
+    "critical_findings": "16",
+    "criticality": "MODERATE",
+    "open_findings": "39",
+    "overdue_findings": "0",
+    "owner_team": "Platform Ops",
+    "system_id": "SYS-013"
+  },
+  {
+    "avg_age_days": "7.7",
+    "critical_findings": "10",
+    "criticality": "MISSION_CRITICAL",
+    "open_findings": "29",
+    "overdue_findings": "0",
+    "owner_team": "Network Eng",
+    "system_id": "SYS-020"
+  },
+  {
+    "avg_age_days": "7.0",
+    "critical_findings": "9",
+    "criticality": "MISSION_CRITICAL",
+    "open_findings": "27",
+    "overdue_findings": "0",
+    "owner_team": "Network Eng",
+    "system_id": "SYS-017"
+  },
+  {
+    "avg_age_days": "7.5",
+    "critical_findings": "11",
+    "criticality": "HIGH",
+    "open_findings": "26",
+    "overdue_findings": "0",
+    "owner_team": "End User Computing",
+    "system_id": "SYS-005"
+  }
+]
