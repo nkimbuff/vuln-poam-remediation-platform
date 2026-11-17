@@ -42,3 +42,6 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 - ML label is seeded synthetic; AUC demonstrates the MLOps path only.
 - UC masking is on a secure view; the build ran as an admin, so the masked path was not exercised.
 - Gold is rebuilt from scans each run; findings that disappear from scans are not auto-closed.
+
+## Table and column descriptions
+Pipeline tables get descriptions from `lakeflow/pipeline.py` (`COLS` + `schema=` with COMMENTs) because manual comments on pipeline-managed tables are reset on refresh (tested; see `evidence/08_descriptions.log`). `governance/06_static_comments.py` describes the objects the pipeline does not manage (`gold_findings_secure`, `finding_priority`); re-run it after the ML notebook.

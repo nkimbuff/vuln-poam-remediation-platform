@@ -1,0 +1,203 @@
+# 08 Table and column descriptions - 2026-11-17T18:05:16Z
+Docs check: https://docs.databricks.com/api/uc-catalogs/v1/catalog covers only catalog-level comments; it says nothing about table/column comments or refresh behavior, so behavior was tested directly.
+
+## Experiment results (pipeline gold_system_risk, a materialized view)
+1. COMMENT ON TABLE ... 'TEST manual table comment' -> after a pipeline update the comment reverted to the pipeline's own comment=. Manual comments on pipeline-managed tables do NOT persist.
+2. ALTER TABLE ... ALTER COLUMN on a materialized view -> error EXPECT_TABLE_NOT_VIEW (treated as a view).
+3. Column metadata via Column.alias(metadata={'comment':...}) -> 0 comments written (approach abandoned).
+4. schema= DDL with COMMENT in @dlt.table -> comments written, and still present after a second refresh. This is what lakeflow/pipeline.py uses.
+
+## Column comment coverage after two refreshes (pipeline tables) + static objects
+[
+  {
+    "cols": "12",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1",
+    "with_comment": "12"
+  },
+  {
+    "cols": "5",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1",
+    "with_comment": "5"
+  },
+  {
+    "cols": "19",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1",
+    "with_comment": "19"
+  },
+  {
+    "cols": "13",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1",
+    "with_comment": "8"
+  },
+  {
+    "cols": "11",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1",
+    "with_comment": "11"
+  },
+  {
+    "cols": "8",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1",
+    "with_comment": "7"
+  },
+  {
+    "cols": "14",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1",
+    "with_comment": "12"
+  },
+  {
+    "cols": "12",
+    "table_name": "bronze_scans",
+    "with_comment": "12"
+  },
+  {
+    "cols": "5",
+    "table_name": "bronze_systems",
+    "with_comment": "5"
+  },
+  {
+    "cols": "10",
+    "table_name": "event_log_00f24272_d3eb_49f0_bbed_6cc897e460d0",
+    "with_comment": "0"
+  },
+  {
+    "cols": "3",
+    "table_name": "finding_priority",
+    "with_comment": "3"
+  },
+  {
+    "cols": "19",
+    "table_name": "gold_findings",
+    "with_comment": "19"
+  },
+  {
+    "cols": "18",
+    "table_name": "gold_findings_secure",
+    "with_comment": "18"
+  },
+  {
+    "cols": "8",
+    "table_name": "gold_system_risk",
+    "with_comment": "8"
+  },
+  {
+    "cols": "11",
+    "table_name": "silver_findings",
+    "with_comment": "11"
+  },
+  {
+    "cols": "7",
+    "table_name": "silver_quarantine",
+    "with_comment": "7"
+  },
+  {
+    "cols": "12",
+    "table_name": "silver_scan_rows",
+    "with_comment": "12"
+  }
+]
+## Table comments
+[
+  {
+    "comment": "Raw scan rows, ingested incrementally with Auto Loader",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_scans_1"
+  },
+  {
+    "comment": "System reference data (criticality, owning team)",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_bronze_systems_1"
+  },
+  {
+    "comment": "Gold: findings enriched with system criticality, SLA and age",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_findings_1"
+  },
+  {
+    "comment": "Gold: per-system risk rollup for ISSO review",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_gold_system_risk_1"
+  },
+  {
+    "comment": "De-duplicated findings (one row per host+CVE) with first/last seen",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_findings_1"
+  },
+  {
+    "comment": "Quarantine: scan rows rejected by validation, kept for ISSO review",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_quarantine_1"
+  },
+  {
+    "comment": "Row-level typed scan rows that pass validation",
+    "table_name": "__materialization_mat_00f24272_d3eb_49f0_bbed_6cc897e460d0_silver_scan_rows_1"
+  },
+  {
+    "comment": "Raw scan rows, ingested incrementally with Auto Loader",
+    "table_name": "bronze_scans"
+  },
+  {
+    "comment": "System reference data (criticality, owning team)",
+    "table_name": "bronze_systems"
+  },
+  {
+    "comment": "",
+    "table_name": "event_log_00f24272_d3eb_49f0_bbed_6cc897e460d0"
+  },
+  {
+    "comment": "ML remediation priority per finding: score 0-1 (higher = remediate first) and rank. Model trained on a seeded synthetic label.",
+    "table_name": "finding_priority"
+  },
+  {
+    "comment": "Gold: findings enriched with system criticality, SLA and age",
+    "table_name": "gold_findings"
+  },
+  {
+    "comment": "Gold findings with hostname and IP masked for users outside isso_analysts/admins. Source for the Genie space.",
+    "table_name": "gold_findings_secure"
+  },
+  {
+    "comment": "Gold: per-system risk rollup for ISSO review",
+    "table_name": "gold_system_risk"
+  },
+  {
+    "comment": "De-duplicated findings (one row per host+CVE) with first/last seen",
+    "table_name": "silver_findings"
+  },
+  {
+    "comment": "Quarantine: scan rows rejected by validation, kept for ISSO review",
+    "table_name": "silver_quarantine"
+  },
+  {
+    "comment": "Row-level typed scan rows that pass validation",
+    "table_name": "silver_scan_rows"
+  }
+]
+## Sample: gold_findings column comments
+[
+  {
+    "column_name": "system_id",
+    "comment": "Identifier of the owning information system (SYS-nnn). Joins to system reference data."
+  },
+  {
+    "column_name": "finding_key",
+    "comment": "Natural key of a finding: hostname|cve_id. Same value across weekly scans."
+  },
+  {
+    "column_name": "hostname",
+    "comment": "Synthetic host name where the vulnerability was detected. Masked for non-ISSO users in the secure view."
+  },
+  {
+    "column_name": "ip_address",
+    "comment": "Synthetic IPv4 address of the host. Masked for non-ISSO users in the secure view."
+  },
+  {
+    "column_name": "cve_id",
+    "comment": "CVE identifier of the vulnerability (CVE-YYYY-NNNN)."
+  },
+  {
+    "column_name": "severity",
+    "comment": "Scanner severity: CRITICAL, HIGH, MEDIUM or LOW. Drives the remediation SLA."
+  },
+  {
+    "column_name": "cvss",
+    "comment": "CVSS base score, 0-10. In silver/gold the highest score seen across scans."
+  },
+  {
+    "column_name": "exploit_available",
+    "comment": "True if a public exploit is known for the CVE."
+  }
+]
