@@ -1,0 +1,20 @@
+# 07 Databricks App deploy - 2026-11-17T17:16:16Z
+app=vuln-poam-triage  url=https://vuln-poam-triage-7474654152993113.aws.databricksapps.com  deployment=01f1e2aa83951da18d8c0aeff4bb06b7
+service principal client id: 84f80175-eea8-4c78-8291-107975e9c361 (Lakebase role app-vuln-poam; UC SELECT on schema; CAN_USE warehouse; CAN_RUN Genie space)
+VERIFIED: deployment SUCCEEDED, app RUNNING, / and /_stcore/health return HTTP 200.
+NOT VERIFIED BY SCRIPT: in-app Lakebase reads/writes and Genie tab (Streamlit executes only in a browser session). Needs a manual click-through.
+
+{'app_status': {'message': 'App has status: App is running', 'state': 'RUNNING'}, 'compute_status': {'message': 'App compute is running.', 'state': 'ACTIVE'}, 'url': 'https://vuln-poam-triage-7474654152993113.aws.databricksapps.com'}
+
+2026-11-17T17:15:46Z [BUILD]   Attempting uninstall: databricks-sdk
+2026-11-17T17:15:46Z [BUILD]     Found existing installation: databricks-sdk 0.33.0
+2026-11-17T17:15:46Z [BUILD]     Uninstalling databricks-sdk-0.33.0:
+2026-11-17T17:15:46Z [BUILD]       Successfully uninstalled databricks-sdk-0.33.0
+2026-11-17T17:15:47Z [BUILD] Successfully installed databricks-sdk-0.167.0 psycopg-3.3.9 psycopg-binary-3.3.9
+2026-11-17T17:15:48Z [BUILD] 
+2026-11-17T17:15:48Z [BUILD] [INFO] Requirements installed successfully.
+2026-11-17T17:15:48Z [BUILD] [INFO] Starting app with command: [streamlit run app.py]
+2026-11-17T17:15:50Z [APP] 
+2026-11-17T17:15:50Z [APP] 
+2026-11-17T17:15:50Z [BUILD] [INFO] Deployment 01f1e2aa83951da18d8c0aeff4bb06b7 ended in 7.698316892s
+2026-11-17T17:15:50Z [BUILD] [INFO] Deployment successful

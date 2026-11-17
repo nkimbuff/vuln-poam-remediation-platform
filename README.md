@@ -33,4 +33,12 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 - [x] Lakebase (1,158 findings synced; read p50 2.8ms, write p50 11ms)
 - [x] ML / Gen AI (UC model, scores, 5 LLM POA&M drafts)
 - [x] Genie (space + 3 NL questions with SQL and results)
-- [ ] App
+- [x] App deployed (data path in-app not yet click-tested)
+
+## Evidence
+`evidence/01..07_*.log` hold the text output of each stage (row counts, expectations, UC tags/grants/lineage, Lakebase latency, model + LLM output, Genie SQL/results, app deploy). Each log notes its own caveats.
+
+## Known limitations
+- ML label is seeded synthetic; AUC demonstrates the MLOps path only.
+- UC masking is on a secure view; the build ran as an admin, so the masked path was not exercised.
+- Gold is rebuilt from scans each run; findings that disappear from scans are not auto-closed.

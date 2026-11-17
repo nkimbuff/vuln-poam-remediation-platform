@@ -1,0 +1,6 @@
+command: ["streamlit", "run", "app.py"]
+env:
+  - name: LAKEBASE_ENDPOINT
+    value: "projects/vuln-poam-ops/branches/production/endpoints/primary"
+  - name: GENIE_SPACE_ID
+    value: "01f1e2a69970155d840ef56e14803a07"
