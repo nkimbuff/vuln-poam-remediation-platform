@@ -1,0 +1,11 @@
+# 04 Lakebase sync + latency - 2026-11-17T16:39:40Z
+project=projects/vuln-poam-ops  run_id=683247100998074  (PG 17, 1 CU)
+note: latency writes leave 100 findings IN_PROGRESS with synthetic owners (test data).
+
+connected ep-polished-scene-d21jnfui.database.us-east-1.cloud.databricks.com as nate.kim@databricks.com | server: PostgreSQL 17.12 (14c6cec) on aarch64-un
+tables ready: ops.findings, ops.poams, ops.status_history
+synced 763 gold rows -> ops.findings in 0.03s
+row counts: 763 findings; {'OPEN': 763}
+latency read: n=100 p50=1.6ms p95=2.6ms max=3.8ms
+latency write: n=100 p50=7.4ms p95=13.7ms max=16.4ms
+after writes: {'IN_PROGRESS': 100, 'OPEN': 663} | history rows: 101

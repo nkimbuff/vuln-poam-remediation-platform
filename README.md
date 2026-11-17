@@ -30,7 +30,7 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 - [x] Synthetic data landed
 - [x] Lakeflow pipeline run (1,194 bronze -> 1,176 valid + 18 quarantined -> 763 findings)
 - [x] UC governance (tags, mask function + secure view, grants, lineage)
-- [ ] Lakebase
-- [ ] ML / Gen AI
+- [x] Lakebase (763 findings synced; read p50 1.6ms, write p50 7.4ms)
+- [x] ML / Gen AI (UC model, scores, 5 LLM POA&M drafts)
 - [ ] Genie
 - [ ] App
