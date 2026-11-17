@@ -1,0 +1,12 @@
+# 01 synthetic data landing - 2026-11-17T16:20:50Z
+$ python3 -I data_gen/generate_scans.py OUT 42
+     289 /tmp/vuln_scans_out/scan_2026-09-07.csv
+     415 /tmp/vuln_scans_out/scan_2026-09-14.csv
+     493 /tmp/vuln_scans_out/scan_2026-09-21.csv
+      21 /tmp/vuln_scans_out/systems.csv
+    1218 total
+$ databricks fs ls (volume)
+scan_2026-09-07.csv
+scan_2026-09-14.csv
+scan_2026-09-21.csv
+systems.csv
