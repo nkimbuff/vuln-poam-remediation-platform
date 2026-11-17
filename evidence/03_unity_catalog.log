@@ -1,0 +1,128 @@
+# 03 Unity Catalog governance - 2026-11-17T16:35:23Z
+## Table/column tags
+[
+  {
+    "column_name": "",
+    "table_name": "bronze_scans",
+    "tag_name": "data_marking",
+    "tag_value": "cui"
+  },
+  {
+    "column_name": "",
+    "table_name": "bronze_scans",
+    "tag_name": "layer",
+    "tag_value": "bronze"
+  },
+  {
+    "column_name": "",
+    "table_name": "bronze_scans",
+    "tag_name": "sensitivity",
+    "tag_value": "internal"
+  },
+  {
+    "column_name": "",
+    "table_name": "gold_findings",
+    "tag_name": "data_marking",
+    "tag_value": "cui"
+  },
+  {
+    "column_name": "",
+    "table_name": "gold_findings",
+    "tag_name": "sensitivity",
+    "tag_value": "internal"
+  },
+  {
+    "column_name": "hostname",
+    "table_name": "gold_findings",
+    "tag_name": "pii_like",
+    "tag_value": "asset_identifier"
+  },
+  {
+    "column_name": "ip_address",
+    "table_name": "gold_findings",
+    "tag_name": "pii_like",
+    "tag_value": "asset_identifier"
+  },
+  {
+    "column_name": "",
+    "table_name": "gold_system_risk",
+    "tag_name": "layer",
+    "tag_value": "gold"
+  },
+  {
+    "column_name": "",
+    "table_name": "gold_system_risk",
+    "tag_name": "sensitivity",
+    "tag_value": "internal"
+  }
+]
+## Grants on secure view and schema (account users)
+[
+ {
+  "ActionType": "SELECT",
+  "ObjectKey": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings_secure",
+  "ObjectType": "TABLE",
+  "Principal": "account users"
+ }
+]
+## Masking function body
+[
+  {
+    "routine_definition": "CASE WHEN is_account_group_member('isso_analysts') OR is_member('admins') THEN v\n              ELSE concat(substr(v, 1, 5), '****') END"
+  }
+]
+## Secure view read (caller is a workspace admin, so unmasked path)
+[
+  {
+    "hostname": "host-0018.example.internal",
+    "ip_address": "10.183.107.175",
+    "severity": "CRITICAL"
+  },
+  {
+    "hostname": "host-0142.example.internal",
+    "ip_address": "10.10.137.148",
+    "severity": "HIGH"
+  },
+  {
+    "hostname": "host-0102.example.internal",
+    "ip_address": "10.43.123.185",
+    "severity": "LOW"
+  }
+]
+## Lineage (system.access.table_lineage)
+[
+  {
+    "source_table_full_name": "",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans"
+  },
+  {
+    "source_table_full_name": "",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems"
+  },
+  {
+    "source_table_full_name": "",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.event_log_00f24272_d3eb_49f0_bbed_6cc897e460d0"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_systems",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_findings",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.gold_system_risk"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_findings"
+  },
+  {
+    "source_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.bronze_scans",
+    "target_table_full_name": "serverless_stable_seg9n6_catalog.vuln_poam.silver_scan_rows"
+  }
+]
+
+NOTE: masking path for non-admin callers is not exercised here; caller is a workspace admin (is_member('admins')), so the secure view returns clear values.
