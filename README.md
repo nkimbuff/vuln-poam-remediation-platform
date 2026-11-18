@@ -10,6 +10,15 @@ End-to-end prototype: scan evidence in, governed findings and POA&Ms out, with I
 
 **Goal:** cut end-to-end cycle time from scan evidence to accountable action.
 
+## Two audiences, two stories
+
+| Audience | What they care about | Read |
+|---|---|---|
+| **Executive sponsor** (CISO or program sponsor who funds this) | Audit and compliance posture, program risk reduction, budget and staff time, and a decision they can make: fund a time-boxed pilot | [EXECUTIVE_BRIEF.md](EXECUTIVE_BRIEF.md) |
+| **ISSO and technical implementer** | Triage, ownership, evidence-backed closure, and how the pipeline and governance work | This README and [SUBMISSION.md](SUBMISSION.md) |
+
+How AI was used, both inside the product and to build it, is in [AI_WORKFLOW.md](AI_WORKFLOW.md).
+
 ## Journey
 | Stage | Databricks capability | What it does here |
 |---|---|---|
@@ -33,7 +42,9 @@ Catalog/schema used: `serverless_stable_seg9n6_catalog.vuln_poam`.
 - [x] Lakebase (1,158 findings synced; read p50 2.8ms, write p50 11ms)
 - [x] ML / Gen AI (UC model, scores, 5 LLM POA&M drafts)
 - [x] Genie (space + 3 NL questions with SQL and results)
-- [x] App deployed (data path in-app not yet click-tested)
+- [x] App deployed; its write path (owner, status, closure evidence, history) is evidenced in `evidence/10_portal_writes.log` (the in-portal Genie tab is not evidenced)
+- [x] Scale test: about 300,000 findings in an isolated schema (`evidence/09_scale_test.log`; ingest to prioritized tables only)
+- [x] Executive brief, AI workflow account, and submission map ([EXECUTIVE_BRIEF.md](EXECUTIVE_BRIEF.md), [AI_WORKFLOW.md](AI_WORKFLOW.md), [SUBMISSION.md](SUBMISSION.md))
 
 ## Evidence
 `evidence/01..07_*.log` hold the text output of each stage (row counts, expectations, UC tags/grants/lineage, Lakebase latency, model + LLM output, Genie SQL/results, app deploy). Each log notes its own caveats.

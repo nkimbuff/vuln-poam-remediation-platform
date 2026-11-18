@@ -1,0 +1,105 @@
+# 09 Scale test - 2026-11-18T17:01:04Z
+Isolated: schema serverless_stable_seg9n6_catalog.vuln_poam_scale, pipeline d29202aa-da7a-40b5-b63e-e9260605b621 (serverless). Demo tables, Genie and the app were not touched.
+Data: data_gen/generate_scans_scale.py (deterministic, hash-based). 200 systems, 30,000 hosts, 2,000 CVEs, ~299k unique findings, each persisting 1-6 weekly scans; ~0.5% deliberately dirty rows.
+SCOPE: ingest -> validate -> silver -> gold only. NOT tested at this scale: Lakebase sync, the app's queries, the ML scoring, Genie.
+CAVEAT: single run each, serverless autoscaling, no repeat; treat durations as indicative, not a benchmark.
+
+## Update 1: initial load, weeks 0-9 (792,829 scan rows)  update_id=48224d8c-0390-4a24-9717-2dbe9f9ac905
+[
+  {
+    "ended": "2026-11-18T16:58:15.203Z",
+    "seconds": "72",
+    "started": "2026-11-18T16:57:03.563Z"
+  }
+]
+## Row counts after update 1 (recorded from the run output when update 1 finished; not re-queried, because update 2 has since changed the tables)
+    bronze_scans      792,829
+    silver_scan_rows  788,961
+    silver_quarantine   3,868   (788,961 + 3,868 = 792,829, every row accounted for)
+    silver_findings   270,452
+    gold_findings     270,452
+    gold_system_risk      200
+## Update 2: incremental, +1 weekly scan (95,817 new rows)  update_id=9c723b74-fd72-4285-bd2e-c03fe19599a1
+[
+  {
+    "ended": "2026-11-18T17:00:24.737Z",
+    "seconds": "104",
+    "started": "2026-11-18T16:58:40.230Z"
+  }
+]
+## Row counts after update 2 (queried live; these are the current table contents)
+[
+  {
+    "n": "884267",
+    "t": "silver_scan_rows"
+  },
+  {
+    "n": "888646",
+    "t": "bronze_scans"
+  },
+  {
+    "n": "4379",
+    "t": "silver_quarantine"
+  },
+  {
+    "n": "297739",
+    "t": "silver_findings"
+  },
+  {
+    "n": "297739",
+    "t": "gold_findings"
+  },
+  {
+    "n": "200",
+    "t": "gold_system_risk"
+  }
+]
+## Check: bronze grew by exactly the new rows (792,829 + 95,817 = 888,646, matches the count above)
+## Dirty-row rate: 4,379 quarantined of 888,646 = 0.49%, all failing valid_severity (the generator plants severity UNKNOWN in about 0.5% of rows)
+## Observation: update 2 (+95,817 rows) took 104 s versus 72 s for the initial 792,829 rows, so run time here is not simply proportional to new data; downstream tables may recompute. Single runs; profile before relying on either number.
+## Overdue at scale
+[
+  {
+    "findings": "29131",
+    "overdue": "21078",
+    "severity": "CRITICAL"
+  },
+  {
+    "findings": "60242",
+    "overdue": "32826",
+    "severity": "HIGH"
+  },
+  {
+    "findings": "85177",
+    "overdue": "0",
+    "severity": "LOW"
+  },
+  {
+    "findings": "123189",
+    "overdue": "0",
+    "severity": "MEDIUM"
+  }
+]
+## Expectation results, update 2 (valid rows / failures)
+[
+  {
+    "expectation": "cve_present",
+    "failed": "0",
+    "passed": "888646"
+  },
+  {
+    "expectation": "known_system",
+    "failed": "0",
+    "passed": "888646"
+  },
+  {
+    "expectation": "valid_cvss",
+    "failed": "0",
+    "passed": "888646"
+  },
+  {
+    "expectation": "valid_severity",
+    "failed": "4379",
+    "passed": "884267"
+  }
+]

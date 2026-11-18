@@ -1,0 +1,32 @@
+# 10 Operational store evidence: writes recorded from use of the deployed portal - 2026-11-18T19:51:55Z
+run_id=603051533771884  notebook: lakebase/10_app_write_evidence.py (read-only SELECTs; writer emails redacted)
+
+HOW TO READ THIS LOG
+- The portal (Databricks App) writes ops.status_history and ops.poams.closure_evidence. These rows exist because the builder used the portal during rehearsal sessions on 2026-11-18, saving owners, moving findings to IN_PROGRESS, and closing findings.
+- 100 of the 106 'OPEN -> IN_PROGRESS' rows are NOT portal use: they came from the Lakebase latency test (evidence/04). The remaining 6, the 4 'OPEN -> OPEN' owner saves, and every CLOSED row are portal writes.
+- Closure-evidence text is rehearsal text (some entries are placeholders such as 'Text'); it shows the guardrail accepted evidence, not good evidence.
+- This proves the portal's write path (owner, status, closure evidence, history) worked end to end. It does not prove the in-portal Genie tab worked; no committed output covers that.
+
+status_history rows: 116
+by transition and writer (redacted):
+   ***@databricks.com | OPEN -> IN_PROGRESS | n = 106
+   ***@databricks.com | IN_PROGRESS -> CLOSED | n = 5
+   ***@databricks.com | OPEN -> OPEN | n = 4
+   ***@databricks.com | OPEN -> CLOSED | n = 1
+most recent 8 transitions:
+   116 c9a83a06134e OPEN -> CLOSED ***@databricks.com 2026-11-18T19:14:56+00:00
+   115 c9a83a06134e OPEN -> OPEN ***@databricks.com 2026-11-18T19:14:52+00:00
+   114 aff6561e83dd OPEN -> OPEN ***@databricks.com 2026-11-18T19:14:50+00:00
+   113 c6502c23ebc0 IN_PROGRESS -> CLOSED ***@databricks.com 2026-11-18T19:14:38+00:00
+   112 c6502c23ebc0 OPEN -> IN_PROGRESS ***@databricks.com 2026-11-18T19:11:15+00:00
+   111 c6502c23ebc0 OPEN -> OPEN ***@databricks.com 2026-11-18T18:37:50+00:00
+   110 e34553e0bd31 IN_PROGRESS -> CLOSED ***@databricks.com 2026-11-18T18:37:40+00:00
+   109 0dab48d44461 IN_PROGRESS -> CLOSED ***@databricks.com 2026-11-18T18:35:19+00:00
+closed POA&Ms with closure evidence (evidence text shown, first 90 chars):
+   POAM-0005 c6502c23ebc0 CLOSED | closed fixed the end user  | 2026-11-18T19:14:38+00:00
+   POAM-0003 e34553e0bd31 CLOSED | Text | 2026-11-18T18:37:40+00:00
+   POAM-0004 0dab48d44461 CLOSED | Text | 2026-11-18T18:35:19+00:00
+   POAM-0002 119b052a2295 CLOSED | Text  | 2026-11-18T17:38:12+00:00
+   POAM-0001 9c7d6120524d CLOSED | The changes for the end user had been applied and the fix is resolved  | 2026-11-18T16:26:09+00:00
+findings by status: {'CLOSED': 6, 'OPEN': 1052, 'IN_PROGRESS': 100}
+findings with an owner: 105
